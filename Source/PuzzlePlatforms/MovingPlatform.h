@@ -21,6 +21,9 @@ public:
 	virtual void BeginPlay() override;
 
 	virtual void Tick(float DeltaTime) override;
+
+	void AddActiveTrigger();
+	void RemoveActiveTrigger();
 	
 protected:
 
@@ -38,4 +41,6 @@ private:
 	FVector GlobalTargetLocation;
 	FVector GlobalStartLocation;
 
+	UPROPERTY(EditAnywhere)
+	int ActiveTriggers = 1;
 };
